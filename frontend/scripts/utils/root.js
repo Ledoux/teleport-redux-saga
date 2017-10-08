@@ -10,10 +10,11 @@ const setup = Object.assign({}, config,
   typeof window !== 'undefined' && window.__SETUP__)
 
 const initialState = typeof window !== 'undefined' && window.__INITIAL_STATE__
- 
+
 const history = createBrowserHistory({ basename: '/' })
 
 const rootReducer = createRootReducer({ initialState,
+  history,
   setup
 })
 
