@@ -1,4 +1,4 @@
-mport { Provider } from 'react-redux'
+import { Provider } from 'react-redux'
 import { ConnectedRouter } from 'react-router-redux'
 
 import config from './config'
