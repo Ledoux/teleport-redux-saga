@@ -1,8 +1,8 @@
 import { Provider } from 'react-redux'
 import { ConnectedRouter } from 'react-router-redux'
 
-import config from './config'
-import createStore from './store'
+import config from '../utils/config'
+import createStore from '../utils/store'
 import createRootReducer from '../reducers'
 
 export function createRoot (history) {
