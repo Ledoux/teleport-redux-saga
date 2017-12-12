@@ -3,6 +3,7 @@ import { applyMiddleware,
   createStore as _createStore
 } from 'redux'
 
+import createEnhancers from './enhancers'
 import createMiddlewares from './middlewares'
 import createRun from './run'
 
@@ -21,6 +22,7 @@ function createStore ({ history,
   const composeEnhancers = (typeof window !== 'undefined' &&
     window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__) || compose
   const storeEnhancer = composeEnhancers(
+    ...createEnhancers(),
     applyMiddleware(...middlewares)
   )
 
@@ -30,7 +32,8 @@ function createStore ({ history,
     storeEnhancer
   )
   // RUN
-  createRun({ middlewares,
+  createRun({ initialState,
+    middlewares,
     setup,
     store
   })

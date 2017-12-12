@@ -1,11 +1,12 @@
 import createRootSaga from '../sagas'
 
-function createRun({ middlewares,
+function createRun({ initialState,
+  middlewares,
   setup,
   store
 }) {
   // ROOT
-  const rootSaga = createRootSaga ({ setup, store })
+  const rootSaga = createRootSaga ({ initialState, setup, store })
   // SAGA
   middlewares.find(middleware => middleware._name === 'sagaMiddleware')
     .run(rootSaga)
