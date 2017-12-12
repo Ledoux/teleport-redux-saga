@@ -7,7 +7,7 @@
 	},
 	"dependencies": {
 		"react-redux": "^5.0.3",
-    "react-router-redux": "next",
+    "react-router-dom": "5.0.0-alpha.4",
 		"redux": "^3.6.0",
 		"redux-saga": "^0.15.3"
 	},
@@ -18,5 +18,5 @@
     "type": "git",
     "url": "https://github.com/Ledoux/teleport-redux-saga"
   },
-	"version": "0.0.28"
+	"version": "0.0.29"
 }
