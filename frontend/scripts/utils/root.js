@@ -54,7 +54,7 @@ function createRoot (config) {
   )
 
   return { Root,
-    rootProps: Object.assign({ setup }, config)
+    rootProps: Object.assign({ setup, store }, config)
   }
 }
 
