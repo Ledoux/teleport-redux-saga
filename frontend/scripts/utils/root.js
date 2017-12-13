@@ -35,7 +35,7 @@ function createRoot (config) {
 
   const Page = createPage()
 
-  const render = createRender(config)
+  const render = createRender(Object.assign({ Page }, config))
 
   const routes = createRoutes(Object.assign({ render, setup }, config))
 
